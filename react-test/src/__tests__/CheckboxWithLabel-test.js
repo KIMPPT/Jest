@@ -31,15 +31,15 @@ it("CheckboxWithLabel이 클릭 이후 글자가 바뀜", () => {
   expect(queryByLabelText(/on/i)).toBeTruthy();
 });
 
-//it을 통해서 CheckboxWithLabel 컴포넌트에 labelOn="선택" labelOff="취소" 를 넣고 
+//it을 통해서 CheckboxWithLabel 컴포넌트에 labelOn="선택" labelOff="취소" 를 넣고
 //처음에는 취소 텍스트를 가진 라벨을 확인하고
 //클릭한 후에 선택 텍스트를 가진 라벨이 있는지 확인하세요
 
-it("checkboxwithlabel이 클릭 이후 글자 바뀜",()=>{
-    const { queryByLabelText, getByLabelText } = render(
-        <CheckboxWithLabel labelOn="선택" labelOff="취소" />
-      );
-      expect(queryByLabelText(/취소/)).toBeTruthy();
-      fireEvent.click(getByLabelText(/취소/));
-      expect(queryByLabelText(/선택/)).toBeTruthy();
-})
+it("checkboxwithlabel이 클릭 이후 글자 바뀜", () => {
+  const { queryByLabelText, getByLabelText } = render(
+    <CheckboxWithLabel labelOn="선택" labelOff="취소" />
+  );
+  expect(queryByLabelText(/취소/)).toBeTruthy();
+  fireEvent.click(getByLabelText(/취소/));
+  expect(queryByLabelText(/선택/)).toBeTruthy();
+});

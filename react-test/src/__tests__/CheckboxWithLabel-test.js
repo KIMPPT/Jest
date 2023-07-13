@@ -2,6 +2,8 @@
 //cleanup : 테스트가 끝난 후 DOM 마운트 해제
 //fireEvent : 이벤트를 실행
 //render : 컴포넌트를 실행
+//screen : 랜더 이후에 화면에 출력되는 html 엘리멘트를 가져오는 객체
+
 import { cleanup, fireEvent, render } from "@testing-library/react";
 //테스트할 컴포넌트 가져옴
 import CheckboxWithLabel from "../components/CheckboxWithLabel";
